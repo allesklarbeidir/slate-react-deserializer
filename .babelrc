@@ -1,0 +1,10 @@
+{
+    "presets":[
+        ["env", { "modules": false }],
+        "stage-2",
+        "stage-3",
+        "react",
+        "flow"
+    ],
+    "plugins": ["transform-class-properties"]
+}
