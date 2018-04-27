@@ -9,10 +9,9 @@
   },
   "author": "Sebastian Jerratsch <sebastian.jerratsch@gmail.com> (https://github.com/allesklarbeidir)",
   "license": "ISC",
-  "repository" :
-  {
-    "type" : "git",
-    "url" : "https://github.com/allesklarbeidir/slate-react-deserializer"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allesklarbeidir/slate-react-deserializer"
   },
   "dependencies": {
     "debug": "^2.3.2",
@@ -20,9 +19,11 @@
     "prop-types": "^15.5.8",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-immutable-proptypes": "^2.1.0",
-    "slate": "^0.32.1",
-    "slate-prop-types": "^0.4.23"
+    "react-immutable-proptypes": "^2.1.0"
+  },
+  "peerDependencies": {
+    "slate": "~0.32.1",
+    "slate-prop-types": "~0.4.23"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
