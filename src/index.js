@@ -1,5 +1,5 @@
 import React from "react";
-import {Document} from "slate";
+import { Document } from "slate";
 import * as Immutable from "immutable";
 import Node from "./components/node";
 
