@@ -1,6 +1,6 @@
 {
   "name": "slate-react-deserializer",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Deserializes raw Slate documents (json) to the original React-Components but without slate's internal attributes.",
   "main": "./lib/index.js",
   "scripts": {

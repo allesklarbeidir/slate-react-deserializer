@@ -84,7 +84,7 @@ class Node extends React.Component{
     }
 
     const element = renderStack.renderNodes({
-      props,
+      ...props,
       passProps,
       attributes,
       children,
