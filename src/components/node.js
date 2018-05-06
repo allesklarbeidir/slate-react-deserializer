@@ -69,10 +69,10 @@ class Node extends React.Component{
 
   render() {
     this.debug("render", this)
-    const { renderStack, node, parent } = this.props
+    const { renderStack, node, parent, passProps } = this.props
 
     let children = node.nodes.toArray().map((child, i) => {
-      return this.renderNode(child, i)
+      return this.renderNode(child, i, passProps)
     })
 
     // Attributes that the developer must to mix into the element in their
@@ -84,7 +84,7 @@ class Node extends React.Component{
     }
 
     const element = renderStack.renderNodes({
-      ...props,
+      props:{...props, ...passProps},
       attributes,
       children,
     });
@@ -100,7 +100,7 @@ class Node extends React.Component{
    * @return {Element}
    */
 
-  renderNode = (child, index) => {
+  renderNode = (child, index, passProps = {}) => {
     const { renderStack, block, decorations, node, document } = this.props;
     const Component = child.object == "text" ? Text : Node
 
@@ -115,6 +115,7 @@ class Node extends React.Component{
         parent={node}
         document={document}
         renderStack={renderStack}
+        passProps={passProps}
       />
     )
   }

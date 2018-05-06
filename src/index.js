@@ -31,6 +31,7 @@ class ReactDeSerializer{
         doc = Document.fromJSON(doc);
 
         return doc.nodes.map((node,i,nodes) =>{
+            /*passProps is accepted from outside to pass through to rendered components*/
             return (
                 <Node key={i} node={node} parent={doc} document={doc} renderStack={this.renderStack} decorations={Immutable.List([])} />
             )
