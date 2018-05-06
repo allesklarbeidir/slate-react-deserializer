@@ -17,7 +17,7 @@ class ReactDeSerializer{
         this.renderStack.renderDecorations = renderDecorations;
     }
 
-    deserialize = (document) =>{
+    deserialize = (document, passProps = {}) =>{
         let doc = null;
         if(document && document.object === "document" && document.nodes){
             doc = document;
@@ -33,7 +33,7 @@ class ReactDeSerializer{
         return doc.nodes.map((node,i,nodes) =>{
             /*passProps is accepted from outside to pass through to rendered components*/
             return (
-                <Node key={i} node={node} parent={doc} document={doc} renderStack={this.renderStack} decorations={Immutable.List([])} />
+                <Node key={i} node={node} parent={doc} document={doc} renderStack={this.renderStack} decorations={Immutable.List([])} passProps={passProps} />
             )
         });
     }
