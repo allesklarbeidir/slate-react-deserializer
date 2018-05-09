@@ -84,11 +84,11 @@ class Leaf extends React.Component {
    */
 
   renderMarks() {
-    const { marks, node, offset, text, renderStack } = this.props
+    const { marks, node, offset, text, renderStack, passProps } = this.props
     const leaf = this.renderText();
 
     return marks.reduce((children, mark) => {
-      const props = { mark, marks, node, offset, text, children };
+      const props = { mark, marks, node, offset, text, children, passProps };
       const element = renderStack.renderMarks(props);
       return element || children
     }, leaf)

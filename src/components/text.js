@@ -121,7 +121,7 @@ class Text extends React.Component {
    */
 
   renderLeaf = (leaves, leaf, index, offset) => {
-    const { block, node, parent, renderStack } = this.props
+    const { block, node, parent, renderStack, passProps } = this.props
     const { text, marks } = leaf
 
     return (
@@ -136,6 +136,7 @@ class Text extends React.Component {
         leaves={leaves}
         text={text}
         renderStack={renderStack}
+        passProps={passProps}
       />
     )
   }
